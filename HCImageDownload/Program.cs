@@ -28,7 +28,7 @@ namespace HCImageDownload
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(
-                             "SELECT   [SKU] ,[ImageURL] FROM [HCWeb].[dbo].[Items_Init] WHERE ImageURL <> '' ", connection))
+                             "SELECT [SKU] ,[ImageURL] FROM [HCWeb].[dbo].[Items_Init] WHERE ImageURL <> '' ", connection))
                 {
                     connection.Open();
                     SqlDataReader result = (SqlDataReader)command.ExecuteReader();
